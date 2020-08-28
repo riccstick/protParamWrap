@@ -11,3 +11,9 @@ Bash script, just make it executable and run
 template file can be changed and converted to executable code (tested with argbash_2.8.1; Ubuntu_16.04)
 
 `argbash protParamWrap_template -o protParamWrap`
+### Problems
+- .fasta file must look like this:
+> >seq1
+MQLI...
+RYLI...
+- Amino acid sequence in the .fasta file can only include standard amino acids like 'RHKDESTNQCGPAVILMFYW'; otherwise protParam crashes!
