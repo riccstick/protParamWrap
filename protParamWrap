@@ -114,7 +114,7 @@ check () {
 emptyFormat="|%-60s|\n"
 if [[ -z "$_arg_sequence" ]]; then
 	printf "$emptyFormat" "       !no sequence.fasta given!"
-	printf "$emptyFormat" "      press modelWrap -h for help!"
+	printf "$emptyFormat" "      press protParamWrap -h for help!"
 else
     runScript
 fi
