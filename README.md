@@ -12,8 +12,8 @@ template file can be changed and converted to executable code (tested with argba
 
 `argbash protParamWrap_template -o protParamWrap`
 ### Problems
-- .fasta file must look like this:
+- Fasta file must look like this:
 
 <img src="fasta.png" alt="sample .fasta file"
 	title="sample .fasta file" width="600" />
-- Amino acid sequence in the .fasta file can only include standard amino acids like 'RHKDESTNQCGPAVILMFYW'; otherwise protParam crashes!
+- Amino acid sequence in the .fasta file can only include standard amino acids like `'RHKDESTNQCGPAVILMFYW'`; otherwise protParam crashes!
