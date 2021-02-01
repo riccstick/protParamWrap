@@ -1,0 +1,20 @@
+{
+  "name": "wrapper-raxml-ng",
+  "script_path": "/home/igor/programs/wrapper-raxml-ng",
+  "working_directory": "/home/igor/phylogeny/test",
+  "description": "Settings",
+  "output_files": [
+    "/home/ricci/phylogeny/test/final_tree_*_bootstraps.raxml.log",
+    "/home/ricci/phylogeny/test/final_tree_*_bootstraps.raxml.support",
+    "/home/ricci/phylogeny/test/*.raxml.bestTree"
+  ],
+  "parameters": [
+    {
+      "name": "Sequence file",
+      "param": "-s",
+      "required": true,
+      "type": "file_upload",
+      "description": "Fasta file with sequences."
+    }
+  ]
+}
