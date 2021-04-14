@@ -157,9 +157,13 @@ printf "|%-60s|\n" "..."
 protParamRun () {
 printf "|%-60s|\n" "Calculating protein parameter based on sequence..."
 juliaFile=$(ls *protParam.jl)
+juliaFilenumber=$(echo $juliaFile | wc -w)
+n=1
 for i in $juliaFile;do
+	printf "|%-60s|\n" "     Processing file $n of $juliaFilenumber"
 	name=$(echo $i | cut -d "." -f 1)
-	julia $i > $name.log &
+	julia $i > $name.log
+	n=$(echo $n + 1 | bc -l)
 done
 wait
 printf "|%-60s|\n" "..."
