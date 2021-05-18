@@ -188,7 +188,7 @@ for i in $logFile;do
 
     printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n" "$name" "$II" "$MM" "$AA" "$pI" "$neg" "$pos" "$macox" "$macred" "$hmam" "$hcoli" "$hyeast" > ${name}-data.txt
 done
-printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n" "sequence" "InstabilityIndex" "MolecularWeight" "AminoAcids" "pI" "negative AA" "positive AA" "Extinction coefficient oxidized Cys" "Extinction coefficient reduced Cys" "Half-life mammalian reticulocytes in vitro" "Half-life in yeast in vivo" "Half-life in E. coli in vivo" > summary.txt
+printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n" "sequence" "InstabilityIndex" "MolecularWeight (g mol-1)" "AminoAcids" "pI" "negative AA" "positive AA" "Extinction coefficient oxidized Cys (M-1 cm-1)" "Extinction coefficient reduced Cys (M-1 cm-1" "Half-life mammalian reticulocytes in vitro" "Half-life in yeast in vivo" "Half-life in E. coli in vivo" > summary.txt
 dataFile=$(ls *data.txt)
 for i in $dataFile;do
     cat $i >> summary.txt
