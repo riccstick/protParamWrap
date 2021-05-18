@@ -1,12 +1,10 @@
 {
-  "name": "wrapper-raxml-ng",
-  "script_path": "/home/igor/programs/wrapper-raxml-ng",
-  "working_directory": "/home/igor/phylogeny/test",
+  "name": "protParamWrap",
+  "script_path": "~/programs/protParamWrap",
+  "working_directory": "~/temp/protParam",
   "description": "Settings",
   "output_files": [
-    "/home/ricci/phylogeny/test/final_tree_*_bootstraps.raxml.log",
-    "/home/ricci/phylogeny/test/final_tree_*_bootstraps.raxml.support",
-    "/home/ricci/phylogeny/test/*.raxml.bestTree"
+    "~/temp/protParam/summary.txt"
   ],
   "parameters": [
     {
@@ -14,7 +12,7 @@
       "param": "-s",
       "required": true,
       "type": "file_upload",
-      "description": "Fasta file with sequences."
+      "description": "Upload here a .fasta file with sequences."
     }
   ]
 }

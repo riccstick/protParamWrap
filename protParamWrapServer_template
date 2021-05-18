@@ -20,6 +20,24 @@ ELAPSED="$(($SECONDS / 3600))hrs $((($SECONDS / 60) % 60))min $(($SECONDS % 60))
 printf "|%-30s%30s|\n" "Program finished within:" "$ELAPSED"
 }
 
+queue () {
+#checks if protparam is already running and wait until finished to avoid multi running on server
+emptyFormat="|%-60s|\n"
+while true; do
+        top -b -n 1 -u ricci > temprunner
+        running=$(cat temprunner | grep julia)
+        if [[ -z "$running" ]]; then
+                rm -r $WPATH/* >/dev/null 2>/dev/null
+                break
+        else
+                echo full
+                printf "$emptyFormat" "       another job is still running!"
+                printf "$emptyFormat" "        job will start automatically!"
+                sleep 1m
+        fi
+done
+}
+
 check () {
 #checks if seq and pdb file are given
 emptyFormat="|%-60s|\n"
@@ -131,5 +149,6 @@ getData
 cleanUp
 timeNeed
 }
+queue
 check
 # ] <-- needed because of Argbash

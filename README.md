@@ -1,5 +1,5 @@
 # protParamWrap
-wrapper to submit multiple sequences to analyze with protParam tool
+A wrapper to submit multiple sequences to calculate protein parameter.
 # Requirements
 - [Julia](https://julialang.org/)
   - module [protParam](https://github.com/zmactep/ProtParam.jl) *(the package has to be included into julia)*
@@ -9,11 +9,17 @@ wrapper to submit multiple sequences to analyze with protParam tool
 - `.fasta` files are seperated into single files
 - `.protParam.jl` files are generated for each sequence 
 - `.jl` files are processed by julia and protParam
-- results are saved in the `summary.txt` file (*Important: For my needs I only save pI, Molecular weight, number of Amino acids and Instability Index values; However, of course a lot more data can be extracted from the results of protParam by adding more variables in the getData function...*)
+- results are saved in the `summary.txt` file
+
+## Web Server
+
+- ProtParamWrap is also available as [Web Tool](http://illuzymes.com/), however compared to a local machine the server is relatively slow!
+
 # Installation
+
 Bash script, just make it executable and run
 ## SourceCode compiling with Argbash - argument parser generator
-template file can be changed and converted to executable code (tested with argbash_2.8.1; Ubuntu_16.04)
+template file can be changed and converted to executable code (tested with argbash_2.10; Ubuntu_16.04, 20.04)
 
 `argbash protParamWrap_template -o protParamWrap`
 ### Problems
@@ -22,3 +28,4 @@ template file can be changed and converted to executable code (tested with argba
 <img src="fasta.png" alt="sample .fasta file"
 	title="sample .fasta file" width="600" />
 - Amino acid sequence in the .fasta file can only include standard amino acids like `'RHKDESTNQCGPAVILMFYW'`; otherwise protParam crashes!
+- If sequence names have a space in between (e.g. >seq1 name), everything after the first space will be ignored. Best is to connect the words (e.g. >seq1_name).
