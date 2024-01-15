@@ -3,7 +3,7 @@ A wrapper to submit multiple sequences to calculate protein parameter.
 # Requirements
 - [Julia](https://julialang.org/)
   - module [protParam](https://github.com/zmactep/ProtParam.jl) *(the package has to be included into julia)*
-  - module BioSequences *(the package has to be included into julia)*
+  - module BioSequences@2.0.5 *(the package has to be included into julia)*
 - Installation of Julia and modules can be found [here](https://medium.com/@erikbreslmayr/protparam-standalone-bfa38932e946).
 ## Workflow
 - `.fasta` files are seperated into single files
@@ -16,10 +16,12 @@ A wrapper to submit multiple sequences to calculate protein parameter.
 
 > Breslmayr, E. (2021). protParamWrap - A tool for submission and calculation of multiple protein sequence parameters (Version v1.0).  Zenodo. http://doi.org/10.5281/zenodo.4770671
 
-
 # Installation
-
-Bash script, just make it executable and run
+- Bash script, just make it executable and run.
+- Download this repo and copy the `protParamWrap` file into a folder you prefer.
+- Make it executable: `chmod +x protParamWrap`
+- Test it: `./protParamWrap` or `./protParamWrap -h`
+   
 ## SourceCode compiling with Argbash - argument parser generator
 template file can be changed and converted to executable code (tested with argbash_2.10; Ubuntu_16.04, 20.04)
 
