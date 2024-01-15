@@ -11,9 +11,6 @@ A wrapper to submit multiple sequences to calculate protein parameter.
 - `.jl` files are processed by julia and protParam
 - results are saved in the `summary.txt` file
 
-# Web Server
-
-- ProtParamWrap is also available as [Web Tool](http://illuzymes.com/), however compared to a local machine the server is relatively slow!
 # Citation
 [![DOI](https://zenodo.org/badge/291096447.svg)](https://zenodo.org/badge/latestdoi/291096447)
 
